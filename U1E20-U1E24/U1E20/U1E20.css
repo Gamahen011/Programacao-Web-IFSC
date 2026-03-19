@@ -1,0 +1,31 @@
+h1 {
+    color: rgb(0, 255, 76);
+}
+
+h2 {
+    color: rgb(255, 30, 0);
+}
+
+p.rosa {
+    color: pink;
+}
+
+p.cinza {
+    color: gray;
+}
+
+p.laranja {
+    color: orange;
+}
+
+p.preto {
+    color: black;
+}
+
+p.ciano {
+    color: aqua;
+}
+
+p.marrom {
+    color: brown;
+}

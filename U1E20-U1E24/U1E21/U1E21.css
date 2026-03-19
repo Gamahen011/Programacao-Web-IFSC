@@ -1,0 +1,23 @@
+h1 {
+    color: blue;
+    font-family: "Comic Relief", system-ui;
+    font-size: 100px;
+}
+
+h2 {
+    color: orange;
+    font-family: "Iosevka Charon", monospace;
+    font-size: 55px;
+}
+
+h3 {
+    color: brown;
+    font-family: "Datatype", monospace;
+    font-size: 33px;
+}
+
+h4 {
+    color: blueviolet;
+    font-family: "Bitcount Grid Double Ink", system-ui;
+    font-size: 200px;
+}

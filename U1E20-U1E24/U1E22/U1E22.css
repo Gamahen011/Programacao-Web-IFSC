@@ -1,0 +1,23 @@
+body {
+    background-color: rgb(151, 243, 174);
+    color: rgb(248, 101, 126);
+    font-size: 23px;
+}
+
+
+h1 {
+   color: rgb(243, 54, 243);
+    font-family: "Iosevka Charon", monospace;
+    font-size: 40px;
+}
+
+h2 {
+    color: rgb(157, 104, 255);
+    font-family: "Datatype", monospace;
+    font-size: 35px;
+}
+
+p.final{
+    color: rgb(255, 0, 0);
+    font-family: "Comic Relief", system-ui;
+}
