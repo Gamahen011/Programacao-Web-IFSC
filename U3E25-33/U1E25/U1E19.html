@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 19</title>
+    <link rel="stylesheet" href="style19.css">
+</head>
+<body>
+    <h1>Cadastro de Usuário</h1>
+    <form action="#">
+        <div>
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite o seu nome" required/>
+        </div>
+        <div>
+            <label for="login">Login:</label>
+            <input type="text" id="login" name="login"  placeholder="Digite o seu login" required/>
+        </div>
+        <div>
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" minlength="6" maxlength="6" placeholder="Digite a sua senha" required/>
+        </div>
+        <div>
+            <label for="data">Data de nascimento:</label>
+            <input type="date" id="data" name="data" required/>
+        </div>
+        <div>
+            <label for="status">Status:</label>
+            <select class="status" id="status">
+                <option value="ativo">Ativo</option>
+                <option value="inativo">Inativo</option>
+            </select>
+        </div>
+        <div>
+            <label>Tipo: <input class="radio" type="radio" name="tipo" value="estudante" required checked>Estudante</label>
+            <label><input class="radio" type="radio" name="tipo" value="professor" required checked>Professor</label>
+            <label><input class="radio" type="radio" name="tipo" value="tecnico-administrativo" required checked>Tecnico-Administrativo</label>
+        </div>
+        <div>
+            <label for="obs">Observações:</label>
+            <textarea id="obs" name="obs" placeholder="Digite informações adicionais"></textarea>
+        </div>
+            <label>Módulos:</label>
+            <input class="checkbox" type="checkbox" id="ensino" name="Ensino" value="ensino"> 
+            <label>Ensino</label>
+            <input class="checkbox" type="checkbox" id="pesquisa" name="Pesquisa" value="pesquisa">
+            <label>Pesquisa</label>
+            <input class="checkbox" type="checkbox" id="extensao" name="Extensao" value="extensao"> 
+            <label>Extensão</label>
+        <div class="button">
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpar</button>
+        </div>
+    </form>
+</body>
+</html>
+

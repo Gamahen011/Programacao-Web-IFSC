@@ -1,0 +1,80 @@
+body {
+    background-color: rgb(0, 0, 0);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(255, 255, 255);   
+}
+
+h1 {
+    margin-top: 4vw;
+    margin-bottom: 2vw;
+    margin-left: 40vw;
+    color: rgb(236, 235, 133);
+}
+
+form {
+    width: 40vw;
+    margin: auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    border: 0px;
+    box-sizing: border-box;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+}
+
+input::placeholder, textarea::placeholder {
+    color: rgb(35, 182, 187);
+    opacity: 0.7;
+}
+
+.status {
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    background-color: rgb(248, 86, 86);
+    color: white; 
+    border-radius: 20px;
+    width: 5vw;
+    height: 2vw;
+}
+
+.radio {
+    margin-top: 3px;
+    margin-left: 1vw;
+    margin-bottom: 1vw;
+    width: 5%
+}
+
+.checkbox {
+    margin-top: 0px;
+    margin-left: 2vw;
+    width: 1vw;
+}
+
+button {
+    width: 40%; 
+    padding: 10px; 
+    background-color: rgb(248, 86, 86); 
+    color: rgb(255, 240, 23);
+    border: none; 
+    border-radius: 100px; 
+    transition: 0.3;
+    margin-bottom: 8px;
+    margin-top: 1vw;
+    margin-left: 2vw;
+}
+
+button:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+button:active {
+    opacity: 0.3;
+}
