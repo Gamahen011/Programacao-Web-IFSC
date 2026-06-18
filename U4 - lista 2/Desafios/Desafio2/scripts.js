@@ -1,5 +1,4 @@
 var div = document.getElementById("resultados");
- var numero = Math.floor(Math.random() * 100) + 1;
 
 function atualizar() {
     mensagem = ""
@@ -9,16 +8,10 @@ function atualizar() {
         }
     }
 
-    var valor = parseInt(document.getElementById("valor").value);
-   
+    const palavra = document.getElementById("valor").value
+    const inverso = palavra.split("").reverse().join("");
     
-    if (numero == valor) {
-        mensagem = "Parabéns, você acertou o número"
-    } else if (numero < valor) {
-        mensagem = "Errou! É menor que isso"
-    } else {
-        mensagem = "Errou! É maior que isso"
-    }
+    mensagem = inverso
 
     if (mensagem) {
         p = document.createElement('p');
