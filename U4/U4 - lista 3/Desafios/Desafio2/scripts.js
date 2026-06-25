@@ -1,6 +1,7 @@
 var div = document.getElementById("resultados");
 var casas = [["", "", ""], ["", "", ""], ["", "", ""]];
-var jogador = 'X'
+var jogador = 'X';
+var jogadorAtual = 'X'
 
 function atualizar() {
     casas = [["", "", ""], ["", "", ""], ["", "", ""]]
@@ -14,7 +15,7 @@ function atualizar() {
     }
     let p = document.createElement("p");
     div.appendChild(p);
-    p.textContent = `Vez de ${jogador}`
+    p.textContent = `Vez de ${jogadorAtual}`
 
     criarInputs(p)
 }
@@ -27,22 +28,51 @@ function criarInputs(p) {
             input.id = String(i) + String(j)
             input.value = casas[i][j]
             input.addEventListener("click", (evento) => {
-                let alvo = evento.target
-                let valor = jogador;
+                if (jogadorAtual == "O") {
+                    jogarAleatorio();
+                    if (verificarVitoria()) {
+                        adicionar(`Parabéns, o jogador ${jogadorAtual} venceu. Reinicie para continuar`)
+                    };
+                    mudarjogador();
+                    p.textContent = `Vez de ${jogadorAtual}`;
+                    return
+                };
+                let alvo = evento.target;
+                let valor = jogadorAtual;
                 let posicao = alvo.id.split("")   
                 mudarcasa(posicao, valor)
                 alvo.value = casas[i][j]
                 if (verificarVitoria()) {
-                    adicionar(`Parabéns, o jogador ${jogador}. Reinicie para continuar`)
+                    adicionar(`Parabéns, o jogador ${jogadorAtual} venceu. Reinicie para continuar`)
                 };
                 mudarjogador();
-                p.textContent = `Vez de ${jogador}`; 
+                p.textContent = `Vez de ${jogadorAtual}`;
             });
             div.appendChild(input);
         }
         br = document.createElement("br")
         div.appendChild(br)
     }
+}
+
+function jogarAleatorio() {
+    if (jogadorAtual !== "O") {
+        return
+    }
+    let deu = false;
+    let linha;
+    let coluna;
+
+    do {
+        linha = Math.floor(Math.random() * 3);
+        coluna = Math.floor(Math.random() * 3);
+
+        if (casas[linha][coluna] == "") {
+            deu = true;
+        }
+    } while (!deu);
+    mudarcasa([[linha],[coluna]], jogadorAtual);
+    document.getElementById(`${linha}${coluna}`).value = jogadorAtual;
 }
 
 function mudarcasa(posicao, valor){
@@ -56,11 +86,11 @@ function mudarcasa(posicao, valor){
 }
 
 function mudarjogador() {
-    if (jogador == 'X') {
-        jogador = "O"
+    if (jogadorAtual == 'X') {
+        jogadorAtual = "O"
         return "O"
-    } else if (jogador == "O") {
-        jogador = "X"
+    } else if (jogadorAtual == "O") {
+        jogadorAtual = "X"
         return "X"
     }
 }
