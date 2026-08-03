@@ -5,15 +5,23 @@ function atualizar() {
     let linhas = parseInt(document.getElementById("linhas").value);
     let colunas = parseInt(document.getElementById("colunas").value);
 
-
+    retangulo = desenhar(linhas, colunas);
+    for (let i of retangulo) {
+        adicionar(i, div)
+    }
 };
 
-function desenhar(linhas, colunas){
-    let linha = "+"
-    for (let i=0; i < colunas; i++) {
-        linha += "-"
+function desenhar(linha, coluna) {
+    let desenho = [];
+    for (i = 0; i < linha; i++) {
+        linhastr = "|";
+        for (j = 0; j < coluna; j++) {
+            linhastr += "+|"
+        }
+        desenho.push(linhastr);
     }
-}
+    return desenho
+};
 
 function adicionar(mensagem, div) {
     if (mensagem) {
