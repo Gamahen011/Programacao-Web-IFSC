@@ -1,10 +1,10 @@
-let botoes = []
-let divs = []
+let botoes = [0, 1, 2, 3]
+let divs = [0, 1, 2, 3]
 
-for (let i = 1; i < 5; i++) {
-  botoes.push(document.getElementById(`btn${i}`)); 
-  divs.push(document.getElementById(`box${i}`));
-  botoes[i-1].addEventListener('click', () => atualizar(divs[i]));
+for (let i = 0; i < 4; i++) {
+  botoes[i] = document.getElementById(`btn${i+1}`);
+  divs[i] = document.getElementById(`box${i+1}`);
+  botoes[i].addEventListener('click', () => atualizar(divs[i]));
 }
 
 function atualizar(div) {
